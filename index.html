@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portail des Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- En-tête du portail -->
+        <header class="profile">
+            <div class="avatar">🚀</div>
+            <h1>Portail Serveur</h1>
+            <p>Hub d'accès rapide</p>
+        </header>
+
+        <!-- Liste des liens -->
+        <main class="links">
+            <!-- Lien vers le site vitrine -->
+            <a href="https://nailsbyanastasie.fr" class="link-btn" target="_blank">
+                <span>💅 Site Nails By Anastasie</span>
+                <small>Accueil public</small>
+            </a>
+
+            <!-- Lien vers l'interface d'administration -->
+            <a href="https://coolify.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                <span>⚙️ Dashboard Coolify</span>
+                <small>Administration du serveur</small>
+            </a>
+
+            <!-- Bouton pour copier l'adresse du serveur Minecraft -->
+            <button class="link-btn" onclick="copyToClipboard('minecraft.nailsbyanastasie.fr')">
+                <span>🎮 Serveur Minecraft</span>
+                <small id="mc-text">Clique pour copier l'adresse</small>
+            </button>
+        </main>
+
+        <footer>
+            <p>links.nailsbyanastasie.fr</p>
+        </footer>
+    </div>
+
+    <!-- Petit script pour copier l'IP Minecraft proprement -->
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                const hintText = document.getElementById('mc-text');
+                const originalText = hintText.innerText;
+                hintText.innerText = "✅ Adresse copiée !";
+                hintText.style.color = "#4ade80"; // Vert succès
+
+                setTimeout(() => {
+                    hintText.innerText = originalText;
+                    hintText.style.color = "#888";
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+
+</html>
