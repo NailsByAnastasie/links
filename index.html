@@ -10,44 +10,78 @@
 
 <body>
     <div class="container">
-        <!-- En-tête du portail -->
         <header class="profile">
             <div class="avatar">🚀</div>
             <h1>Portail Serveur</h1>
             <p>Hub d'accès rapide</p>
         </header>
 
-        <!-- Liste des liens -->
-        <main class="links">
-            <!-- Lien vers le site vitrine -->
-            <a href="https://nailsbyanastasie.fr" class="link-btn" target="_blank">
-                <span>💅 Site Nails By Anastasie</span>
-                <small>Accueil public</small>
-            </a>
+        <main class="links-container">
 
-            <!-- Lien vers l'interface d'administration -->
-            <a href="https://coolify.nailsbyanastasie.fr" class="link-btn" target="_blank">
-                <span>⚙️ Dashboard Coolify</span>
-                <small>Administration du serveur</small>
-            </a>
+            <section class="category">
+                <h2>🌍 Public & Clients</h2>
+                <div class="grid-links">
+                    <a href="https://nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>💅 Site Principal</span>
+                        <small>nailsbyanastasie.fr</small>
+                    </a>
+                    <a href="https://calendar.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>📅 Rendez-vous</span>
+                        <small>calendar.nailsbyanastasie.fr</small>
+                    </a>
+                </div>
+            </section>
 
-            <!-- 2. Actual Budget -->
-            <a href="https://budget.nailsbyanastasie.fr" class="link-btn" target="_blank">
-                <span>💶 Actual Budget</span>
-                <small>Gestion financière</small>
-            </a>
+            <section class="category">
+                <h2>💼 Outils & Productivité</h2>
+                <div class="grid-links">
+                    <a href="https://cloud.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>☁️ Nextcloud</span>
+                        <small>Fichiers et synchronisation</small>
+                    </a>
+                    <a href="https://enterprise.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>🏢 ERP Odoo</span>
+                        <small>Gestion d'entreprise</small>
+                    </a>
+                    <a href="https://pass.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>🔑 Vaultwarden</span>
+                        <small>Coffre-fort mots de passe</small>
+                    </a>
+                    <a href="https://spliit.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>💶 Spliit / Budget</span>
+                        <small>Gestion financière</small>
+                    </a>
+                </div>
+            </section>
 
-            <!-- 4. Uptime Kuma -->
-            <a href="https://monitoring.nailsbyanastasie.fr/status/global" class="link-btn" target="_blank">
-                <span>📊 Monitoring Kuma</span>
-                <small>État des services</small>
-            </a>
+            <section class="category">
+                <h2>⚙️ Système & Admin</h2>
+                <div class="grid-links">
+                    <a href="https://coolify.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>🐳 Dashboard Coolify</span>
+                        <small>Administration du serveur</small>
+                    </a>
+                    <a href="https://monitoring.nailsbyanastasie.fr/status/global" class="link-btn" target="_blank">
+                        <span>📊 Uptime Kuma</span>
+                        <small>État des services</small>
+                    </a>
+                    <a href="https://status.nailsbyanastasie.fr" class="link-btn" target="_blank">
+                        <span>🖥️ Dashdot</span>
+                        <small>Ressources serveur (CPU/RAM)</small>
+                    </a>
+                </div>
+            </section>
 
-            <!-- Bouton pour copier l'adresse du serveur Minecraft -->
-            <button class="link-btn" onclick="copyToClipboard('minecraft.nailsbyanastasie.fr')">
-                <span>🎮 Serveur Minecraft</span>
-                <small id="mc-text">Clique pour copier l'adresse</small>
-            </button>
+            <section class="category">
+                <h2>🎮 Divertissement</h2>
+                <div class="grid-links">
+                    <button class="link-btn" onclick="copyToClipboard('minecraft.nailsbyanastasie.fr')">
+                        <span>⛏️ Serveur Minecraft</span>
+                        <small id="mc-text">Clique pour copier l'adresse</small>
+                    </button>
+                </div>
+            </section>
+
         </main>
 
         <footer>
@@ -55,7 +89,6 @@
         </footer>
     </div>
 
-    <!-- Petit script pour copier l'IP Minecraft proprement -->
     <script>
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
